@@ -1,5 +1,5 @@
 import React from "react";
-import { Search, ShoppingCartIcon, User } from "lucide-react";
+import { ChevronDown, Search, ShoppingCartIcon, User } from "lucide-react";
 
 const Navbar = () => {
   return (
@@ -18,12 +18,46 @@ const Navbar = () => {
             Home
           </a>
 
-          <a
-            href="#"
-            className="text-[#F5F5F5] hover:text-[#D4AF37] transition-colors"
-          >
-            Categories
-          </a>
+          {/* Categories Dropdown */}
+          <div className="relative group">
+            <a
+              href="#"
+              className="inline-flex items-center gap-1.5 text-[#F5F5F5] hover:text-[#D4AF37] transition-colors"
+            >
+              Categories
+              <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
+            </a>
+
+            <div className="absolute top-full left-0 mt-3 w-48 bg-[#111111] border border-zinc-800 py-2 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <a
+                href="#"
+                className="block px-4 py-2.5 normal-case text-[#F5F5F5] hover:text-[#D4AF37] hover:bg-zinc-900 transition-colors"
+              >
+                Outerwear
+              </a>
+
+              <a
+                href="#"
+                className="block px-4 py-2.5 normal-case text-[#F5F5F5] hover:text-[#D4AF37] hover:bg-zinc-900 transition-colors"
+              >
+                Essentials
+              </a>
+
+              <a
+                href="#"
+                className="block px-4 py-2.5 normal-case text-[#F5F5F5] hover:text-[#D4AF37] hover:bg-zinc-900 transition-colors"
+              >
+                Accessories
+              </a>
+
+              <a
+                href="#"
+                className="block px-4 py-2.5 normal-case text-[#F5F5F5] hover:text-[#D4AF37] hover:bg-zinc-900 transition-colors"
+              >
+                The Atelier
+              </a>
+            </div>
+          </div>
 
           <a
             href="#"
