@@ -1,7 +1,9 @@
-import React from "react";
-import { ChevronDown, Search, ShoppingCartIcon, User } from "lucide-react";
+import { useState } from "react";
+import { Search, ShoppingCartIcon, User, ChevronDown } from "lucide-react";
 
 const Navbar = () => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
   return (
     <nav className="h-auto md:h-16 bg-[#1A1A1A] border-b border-zinc-800 px-4 md:px-10 py-4 md:py-0 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0">
       {/* Logo + Links */}
@@ -19,16 +21,31 @@ const Navbar = () => {
           </a>
 
           {/* Categories Dropdown */}
-          <div className="relative group">
-            <a
-              href="#"
+          <div
+            className="relative"
+            onMouseEnter={() => setIsDropdownOpen(true)}
+            onMouseLeave={() => setIsDropdownOpen(false)}
+          >
+            <button
+              type="button"
+              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               className="inline-flex items-center gap-1.5 text-[#F5F5F5] hover:text-[#D4AF37] transition-colors"
             >
               Categories
-              <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
-            </a>
+              <ChevronDown
+                className={`w-4 h-4 transition-transform duration-200 ${
+                  isDropdownOpen ? "rotate-180" : ""
+                }`}
+              />
+            </button>
 
-            <div className="absolute top-full left-0 mt-3 w-48 bg-[#111111] border border-zinc-800 py-2 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+            <div
+              className={`absolute top-full left-0 mt-3 w-48 bg-[#111111] border border-zinc-800 py-2 z-50 transition-all duration-200 ${
+                isDropdownOpen
+                  ? "opacity-100 visible"
+                  : "opacity-0 invisible"
+              }`}
+            >
               <a
                 href="#"
                 className="block px-4 py-2.5 normal-case text-[#F5F5F5] hover:text-[#D4AF37] hover:bg-zinc-900 transition-colors"
