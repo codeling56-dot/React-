@@ -3,14 +3,14 @@ import { ChevronDown, Search, ShoppingCartIcon, User } from "lucide-react";
 
 const Navbar = () => {
   return (
-    <nav className="h-16 bg-[#1A1A1A] border-b border-zinc-800 px-10 flex items-center justify-between">
+    <nav className="h-auto md:h-16 bg-[#1A1A1A] border-b border-zinc-800 px-4 md:px-10 py-4 md:py-0 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0">
       {/* Logo + Links */}
-      <div className="flex items-center gap-10">
+      <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10 w-full md:w-auto">
         <h1 className="text-3xl font-semibold tracking-wider text-[#F5F5F5]">
           SUKOI
         </h1>
 
-        <div className="flex items-center gap-8 text-sm uppercase tracking-wide">
+        <div className="flex flex-wrap justify-center md:justify-start items-center gap-4 md:gap-8 text-sm uppercase tracking-wide">
           <a
             href="#"
             className="text-[#F5F5F5] hover:text-[#D4AF37] transition-colors"
@@ -76,8 +76,8 @@ const Navbar = () => {
       </div>
 
       {/* Search + Icons */}
-      <div className="flex items-center gap-6">
-        <div className="flex items-center gap-3 w-72 h-10 px-4 rounded-md bg-[#0A0A0A] border border-zinc-800">
+      <div className="flex items-center gap-6 w-full md:w-auto justify-center md:justify-end">
+        <div className="flex items-center gap-3 w-full md:w-72 h-10 px-4 rounded-md bg-[#0A0A0A] border border-zinc-800">
           <Search size={18} className="text-zinc-500" />
 
           <input

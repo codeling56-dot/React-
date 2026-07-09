@@ -2,15 +2,15 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <section className=" bg-[#0C0F0F]  px-16 py-20">
-      <div className="flex justify-between items-start">
+    <section className="bg-[#0C0F0F] px-6 md:px-16 py-12 md:py-20">
+      <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-12 md:gap-0">
         {/* Left */}
-        <div className="w-1/3 flex flex-col gap-5">
-          <h2 className="font-heading text-4xl font-bold text-neutral">
+        <div className="w-full md:w-1/3 flex flex-col gap-5 text-center md:text-left">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold text-neutral">
             SUKOI
           </h2>
 
-          <p className="font-body text-sm text-zinc-400 leading-6 max-w-xs">
+          <p className="font-body text-sm text-zinc-400 leading-6 max-w-xs mx-auto md:mx-0">
             © 2024 SUKOI. All Rights Reserved.
             <br />
             Quiet Luxury Defined.
@@ -18,12 +18,12 @@ const Footer = () => {
         </div>
 
         {/* Center */}
-        <div className="w-1/3 flex flex-col items-center">
+        <div className="w-full md:w-1/3 flex flex-col items-center">
           <p className="font-label uppercase tracking-[0.2em] text-xs text-secondary font-semibold mb-5">
             Follow Us
           </p>
 
-          <div className="flex gap-8">
+          <div className="flex flex-wrap justify-center gap-6 md:gap-8">
             <a
               href="#"
               className="text-zinc-400 hover:text-secondary transition-colors duration-300"
@@ -48,7 +48,7 @@ const Footer = () => {
         </div>
 
         {/* Right */}
-        <div className="w-1/3 flex flex-col items-end gap-4">
+        <div className="w-full md:w-1/3 flex flex-col items-center md:items-end gap-4">
           <a
             href="#"
             className="text-sm text-neutral hover:text-secondary transition-colors duration-300"
