@@ -28,7 +28,7 @@ const Bento = () => {
         <div className="group">
           <div className="relative h-[28rem] md:h-[40rem] overflow-hidden">
             <img
-              src="public/Overcoat.png"
+              src="Overcoat.png"
               alt="Overcoat"
               className="object-cover h-full w-full transition-transform duration-500 group-hover:scale-105"
             />

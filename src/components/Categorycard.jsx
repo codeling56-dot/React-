@@ -13,7 +13,7 @@ const Categorycard = () => {
         {/* Card 1 */}
         <div className="relative w-full max-w-72 h-[360px] md:h-[420px] overflow-hidden group cursor-pointer">
           <img
-            src="public/outlet.png"
+            src="outlet.png"
             alt="Outerwear"
             className="w-full h-full object-cover transition duration-500 group-hover:scale-105"
           />
@@ -34,7 +34,7 @@ const Categorycard = () => {
         {/* Card 2 */}
         <div className="relative w-full max-w-72 h-[360px] md:h-[420px] overflow-hidden group cursor-pointer">
           <img
-            src="public/Background.png"
+            src="Background.png"
             alt="Essentials"
             className="w-full h-full object-cover transition duration-500 group-hover:scale-105"
           />
@@ -55,7 +55,7 @@ const Categorycard = () => {
         {/* Card 3 */}
         <div className="relative w-full max-w-72 h-[360px] md:h-[420px] overflow-hidden group cursor-pointer">
           <img
-            src="public/Fabric.png"
+            src="Fabric.png"
             alt="Materials"
             className="w-full h-full object-cover transition duration-500 group-hover:scale-105"
           />
